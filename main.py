@@ -1,12 +1,20 @@
 import streamlit as st
 from langchain_helper import create_vector_db, get_qa_chain
 
-st.title("Coursera QA")
+dark = '''
+<style>
+    .stApp {
+    background-color: light;
+    }
+</style>
+'''
+st.markdown(dark, unsafe_allow_html=True)
+st.title("Online CourseBase")
 
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
-    background-color: rgb(49, 49, 240);
+    background-color: rgb(137, 207, 240);
 }
 </style>""", unsafe_allow_html=True)
 
@@ -14,12 +22,6 @@ btn = st.button("Create Knowledgebase")
 if btn:
    pass
 
-b = st.markdown("""
-<style>
-div.stButton > button:first-child {
-    margin-color: rgb(49, 49, 240);
-}
-</style>""", unsafe_allow_html=True)
 
 question = st.text_input("Question: ")
 

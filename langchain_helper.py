@@ -15,7 +15,6 @@ import os
 # from langchain.document_loaders.csv_loader import CSVLoader
 from langchain_community.document_loaders import CSVLoader
 # The below api key is just for experiment , if i can declare it as a var in .env
-api_key = os.environ["GOOGLE_API_KEY"]
 
 
 # Below code is to create vector embeddings from HuggingFace
